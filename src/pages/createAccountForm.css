@@ -23,6 +23,9 @@
 
 .createAccount button {
 	background: var(--primary-gradient);
+	width: 100%;
+	max-width: 30rem;
+	margin: 0 auto;
 }
 
 /* Big Mobile */
@@ -37,9 +40,6 @@
 
 	button {
 		grid-column: 1 / -1;
-		width: 100%;
-		max-width: 35rem;
-		margin: 0 auto;
 	}
 }
 

@@ -4,6 +4,22 @@
 
 .transferFound button {
 	background: var(--secondary-gradient);
+	width: 100%;
+	max-width: 30rem;
+	margin: 0 auto;
+}
+
+.transferFound__body,
+.transferFound__accounts {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 1rem;
+}
+
+svg {
+	align-self: center;
+	transition: 0.2s transform ease;
 }
 
 /* Big Mobile */
@@ -12,10 +28,16 @@
 
 /* Small Tablet */
 @media screen and (min-width: 700px) {
-	button {
+	.transferFound__accounts {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 		width: 100%;
-		max-width: 35rem;
-		margin: 0 auto;
+		gap: 1rem;
+	}
+
+	.transferFound__accounts svg {
+		transform: rotate(-90deg);
 	}
 }
 

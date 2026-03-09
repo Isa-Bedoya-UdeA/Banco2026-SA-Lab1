@@ -23,23 +23,46 @@ h4 {
 main {
 	background-color: var(--gray);
 	margin-top: 11rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.container {
+	width: 90%;
+	max-width: 50rem;
+	background-color: var(--white);
+	border-radius: 1rem;
+	padding: 1rem;
+	box-shadow: 0 4px 6px -2px var(--gray-dark);
 }
 
 /* Big Mobile */
 @media screen and (min-width: 500px) {
 	main {
 		margin-top: 4.5rem;
+		padding: 2rem;
 	}
 }
 
 /* Small Tablet */
 @media screen and (min-width: 700px) {
+	main {
+		padding: 3rem;
+	}
 }
 
 /* Big Tablet */
 @media screen and (min-width: 900px) {
+	main {
+		padding: 4rem;
+	}
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
+	main {
+		padding: 5rem;
+	}
 }

@@ -8,7 +8,7 @@ const CreateAccount = () => {
 			<meta name="keywords" content="" />
 			<main className="createAccount">
 				<div className="createAccount__container container">
-					<section className="createAccount__header">
+					<section className="createAccount__header container__header">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -35,7 +35,7 @@ const CreateAccount = () => {
 							</p>
 						</div>
 					</section>
-					<form className="createAccount__body">
+					<form className="createAccount__body container__form">
 						<div className="form_group">
 							<label htmlFor="first_name">Nombre</label>
 							<input

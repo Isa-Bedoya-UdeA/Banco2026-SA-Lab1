@@ -26,7 +26,7 @@ const TransactionHistory = () => {
 			<meta name="keywords" content="" />
 			<main className="transactionHistory">
 				<div className="trasanctionHistory__container container">
-					<section className="transactionHistory__header">
+					<section className="transactionHistory__header container__header">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -50,7 +50,7 @@ const TransactionHistory = () => {
 							<p>Ver tus transacciones recientes</p>
 						</div>
 					</section>
-					<section className="transactionHistory__body">
+					<section className="transactionHistory__body container__form">
 						{transactionsBase.length > 0 ? (
 							transactionsBase.map((transaction) => (
 								<TransactionCard

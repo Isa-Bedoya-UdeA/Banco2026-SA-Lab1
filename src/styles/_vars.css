@@ -15,6 +15,8 @@
 		var(--terciary-color)
 	);
 
+	--terciary-gradient: linear-gradient(135deg, var(--primary-color), #6bb7ff);
+
 	--primary-light: #e1e1f4;
 
 	--error-bg: #fcf0f0;

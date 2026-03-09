@@ -1,0 +1,19 @@
+.transferFound__header {
+	background: var(--secondary-gradient);
+}
+
+/* Big Mobile */
+@media screen and (min-width: 500px) {
+}
+
+/* Small Tablet */
+@media screen and (min-width: 700px) {
+}
+
+/* Big Tablet */
+@media screen and (min-width: 900px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+}

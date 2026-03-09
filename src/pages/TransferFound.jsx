@@ -8,7 +8,7 @@ const TransferFound = () => {
 			<meta name="keywords" content="" />
 			<main className="transferFound">
 				<div className="transferFound__container container">
-					<section className="transferFound__header">
+					<section className="transferFound__header container__header">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -29,7 +29,7 @@ const TransferFound = () => {
 							<p>Envíe dinero de forma rápida y segura</p>
 						</div>
 					</section>
-					<form className="transferFound__body">
+					<form className="transferFound__body container__form">
 						<div className="form_group">
 							<label htmlFor="origin_account">
 								Cuenta de Origen

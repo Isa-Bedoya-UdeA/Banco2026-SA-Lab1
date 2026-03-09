@@ -7,6 +7,7 @@ const Header = () => {
 		<header>
 			<section className="header__brand">
 				<svg
+					className="header__logo"
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -26,7 +27,7 @@ const Header = () => {
 					<p>2026</p>
 				</article>
 			</section>
-			<nav>
+			<nav className="header__nav">
 				<ul>
 					<NavLink
 						to={PATHS.CREATE_ACCOUNT}

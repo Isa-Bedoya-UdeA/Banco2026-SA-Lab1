@@ -11,20 +11,25 @@ body {
 	color: var(--text-color);
 }
 
-main {
-	background-color: var(--gray);
-}
-
 h1,
 h2,
 h3,
 h4 {
 	font-family: var(--title-font);
 	color: var(--title-color);
+	margin: 0;
+}
+
+main {
+	background-color: var(--gray);
+	margin-top: 11rem;
 }
 
 /* Big Mobile */
 @media screen and (min-width: 500px) {
+	main {
+		margin-top: 4.5rem;
+	}
 }
 
 /* Small Tablet */

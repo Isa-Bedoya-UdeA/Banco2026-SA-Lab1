@@ -25,6 +25,9 @@
 	--text-color: #6c7289;
 	--white: #fff;
 	--gray: #f5f6f9;
+	--gray-dark: rgba(176, 189, 204, 0.5);
+
+	--bg-blur: rgba(238, 237, 247, 0.3);
 
 	--title-font: sans-serif;
 	--text-font: sans-serif;

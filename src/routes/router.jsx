@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { PATHS } from "../consts/routes";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../pages/NotFound";
+import Layout from "../components/layout/Layout"
 
 const Home = lazy(() => import("../pages/Home"));
 

@@ -64,7 +64,7 @@ const TransactionHistory = () => {
 								/>
 							))
 						) : (
-							<p>No hay transacciones</p>
+							<p className="error">No hay transacciones</p>
 						)}
 					</section>
 				</div>

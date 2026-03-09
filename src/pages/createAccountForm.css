@@ -4,7 +4,7 @@
 
 .createAccount__body {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 100%;
 	align-items: center;
 	gap: 1rem;
 }

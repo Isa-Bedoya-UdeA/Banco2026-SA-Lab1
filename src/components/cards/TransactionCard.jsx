@@ -25,8 +25,14 @@ const TransactionCard = ({
 					/>
 				</svg>
 				<div>
-					<p>De: {origin_account}</p>
-					<p>Para: {receiver_account}</p>
+					<p>
+						<span>De: </span>
+						<span>{origin_account}</span>
+					</p>
+					<p>
+						<span>Para: </span>
+						<span>{receiver_account}</span>
+					</p>
 				</div>
 			</div>
 			<div>

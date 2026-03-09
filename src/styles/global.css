@@ -31,14 +31,24 @@ label {
 	color: var(--text-color);
 }
 
+p.error,
+p.success {
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin: 0;
+	font-size: 0.8rem;
+}
+
 p.error {
 	color: var(--error);
 	background-color: var(--error-bg);
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
 	border: 1px solid var(--error);
-	margin: 0;
-	font-size: 0.8rem;
+}
+
+p.success {
+	color: var(--success);
+	background-color: var(--success-bg);
+	border: 1px solid var(--success);
 }
 
 .logo {
@@ -79,6 +89,10 @@ main {
 	color: var(--white);
 }
 
+.container__header > div {
+	width: 100%;
+}
+
 .container__header p {
 	margin: 0;
 	color: var(--gray);
@@ -110,6 +124,7 @@ button {
 	gap: 0.5rem;
 	font-family: var(--title-font);
 	color: var(--white);
+	transition: 0.2s transform ease;
 }
 
 /* Big Mobile */
@@ -143,6 +158,10 @@ button {
 
 	.logo:hover {
 		transform: rotate(10deg);
+	}
+
+	button:hover {
+		transform: translateY(-0.2rem);
 	}
 }
 

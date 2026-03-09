@@ -1,0 +1,61 @@
+.transactionCard {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--gray);
+	border-radius: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--gray-dark);
+	transition: 0.2s transform ease;
+}
+
+.transactionCard p {
+	margin: 0;
+}
+
+.transactionCard p span:first-child {
+	font-family: var(--title-font);
+}
+
+.transactionCard h3 {
+	color: var(--success);
+}
+
+.transactionCard__data {
+}
+
+.transactionCard__data svg {
+	background-color: var(--primary-light);
+	border-radius: 0.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.5rem;
+}
+
+/* Big Mobile */
+@media screen and (min-width: 500px) {
+	.transactionCard__data {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.transactionCard {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+/* Small Tablet */
+@media screen and (min-width: 700px) {
+	.transactionCard:hover {
+		transform: translateY(-0.2rem);
+	}
+}
+
+/* Big Tablet */
+@media screen and (min-width: 900px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+}

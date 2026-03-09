@@ -17,9 +17,9 @@ const TransferFound = () => {
 						<path
 							fill="none"
 							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
 						/>
 					</svg>
@@ -47,9 +47,9 @@ const TransferFound = () => {
 						<path
 							fill="none"
 							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							d="M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1zM9 4h6"
 						/>
 					</svg>
@@ -83,9 +83,9 @@ const TransferFound = () => {
 							<path
 								fill="none"
 								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
 							/>
 						</svg>

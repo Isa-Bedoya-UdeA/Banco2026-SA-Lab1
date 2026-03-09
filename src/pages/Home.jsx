@@ -1,10 +1,12 @@
 const Home = () => {
 	return (
 		<>
-			<title></title>
+			<title>Inicio | Banco</title>
 			<meta name="description" content="" />
 			<meta name="keywords" content="" />
-			<main className="home"></main>
+			<main className="home">
+				<h1>Hello World</h1>
+			</main>
 		</>
 	);
 };

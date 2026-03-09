@@ -1,0 +1,5 @@
+@import "../../styles/_vars.css";
+
+header {
+	background-color: var(--white);
+}

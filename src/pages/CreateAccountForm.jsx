@@ -44,6 +44,7 @@ const CreateAccount = () => {
 								name="first_name"
 								id="first_name"
 							/>
+							<p className="error">Validaciones</p>
 						</div>
 						<div className="form_group">
 							<label htmlFor="last_name">Apellido</label>
@@ -53,6 +54,7 @@ const CreateAccount = () => {
 								name="last_name"
 								id="last_name"
 							/>
+							<p className="error">Validaciones</p>
 						</div>
 						<div className="form_group">
 							<label htmlFor="account_number">
@@ -64,6 +66,7 @@ const CreateAccount = () => {
 								name="account_number"
 								id="account_number"
 							/>
+							<p className="error">Validaciones</p>
 						</div>
 
 						<button type="submit">

@@ -25,6 +25,32 @@ h1 {
 	margin-bottom: 0.2rem;
 }
 
+::placeholder,
+label {
+	font-family: var(--text-font);
+	color: var(--text-color);
+}
+
+p.error {
+	color: var(--error);
+	background-color: var(--error-bg);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--error);
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+.logo {
+	background: var(--primary-gradient);
+	border-radius: 0.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	color: var(--white);
+	padding: 0.5rem;
+	transition: 0.2s transform ease;
+}
+
 main {
 	background-color: var(--gray);
 	margin-top: 11rem;
@@ -113,6 +139,10 @@ button {
 
 	.container__form {
 		padding: 2rem;
+	}
+
+	.logo:hover {
+		transform: rotate(10deg);
 	}
 }
 

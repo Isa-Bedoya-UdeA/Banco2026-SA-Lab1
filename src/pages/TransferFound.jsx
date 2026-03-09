@@ -41,6 +41,7 @@ const TransferFound = () => {
 									name="origin_account"
 									id="origin_account"
 								/>
+								<p className="error">Validaciones</p>
 							</div>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +68,7 @@ const TransferFound = () => {
 									name="receiver_account"
 									id="receiver_account"
 								/>
+								<p className="error">Validaciones</p>
 							</div>
 						</div>
 						<div className="form_group">
@@ -77,6 +79,7 @@ const TransferFound = () => {
 								name="amount"
 								id="amount"
 							/>
+							<p className="error">Validaciones</p>
 						</div>
 						<button type="submit">
 							<svg

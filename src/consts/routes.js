@@ -1,6 +1,5 @@
 export const PATHS = {
-	HOME: "/",
-    CREATE_ACCOUNT: "/create",
-    TRANSFER_FOUND: "/transfer",
-    TRANSACTION_HISTORY: "/history"
+	CREATE_ACCOUNT: "/",
+	TRANSFER_FOUND: "/transfer",
+	TRANSACTION_HISTORY: "/history",
 };

@@ -5,7 +5,7 @@ import { PATHS } from "../../consts/routes";
 const Header = () => {
 	return (
 		<header>
-			<Link to={PATHS.HOME} className="header__brand">
+			<section className="header__brand">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -25,7 +25,7 @@ const Header = () => {
 					<h2>Banco UdeA</h2>
 					<p>2026</p>
 				</article>
-			</Link>
+			</section>
 			<nav>
 				<ul>
 					<NavLink

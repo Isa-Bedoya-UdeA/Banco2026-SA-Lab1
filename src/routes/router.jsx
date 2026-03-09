@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { PATHS } from "../consts/routes";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../pages/NotFound";
@@ -7,11 +7,9 @@ import CreateAccountForm from "../pages/CreateAccountForm";
 import TransferFound from "../pages/TransferFound";
 import TransactionHistory from "../pages/TransactionHistory";
 
-const Home = lazy(() => import("../pages/Home"));
-
 export const router = createBrowserRouter([
 	{
-		path: PATHS.HOME,
+		path: PATHS.CREATE_ACCOUNT,
 		element: <Layout />,
 		errorElement: <div>¡Ups! Algo salió mal.</div>,
 		children: [
@@ -19,19 +17,14 @@ export const router = createBrowserRouter([
 				index: true,
 				element: (
 					<Suspense fallback="...">
-						<Home />
-					</Suspense>
-				),
-			},
-			{
-				path: PATHS.CREATE_ACCOUNT,
-				element: (
-					<Suspense fallback="...">
 						<CreateAccountForm />
 					</Suspense>
 				),
 			},
-			{ path: PATHS.TRANSFER_FOUND, element: <TransferFound /> },
+			{
+				path: PATHS.TRANSFER_FOUND,
+				element: <TransferFound />,
+			},
 			{
 				path: PATHS.TRANSACTION_HISTORY,
 				element: <TransactionHistory />,

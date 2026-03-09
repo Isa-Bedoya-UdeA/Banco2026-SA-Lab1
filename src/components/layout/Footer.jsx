@@ -1,3 +1,4 @@
+import "./footer.css";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../consts/routes";
 
@@ -11,7 +12,6 @@ const Footer = () => {
 			<section className="footer__navigation">
 				<h3>Navegación</h3>
 				<ul>
-					<Link to={PATHS.HOME}>Inicio</Link>
 					<Link to={PATHS.CREATE_ACCOUNT}>Crear Cuenta</Link>
 					<Link to={PATHS.TRANSFER_FOUND}>Transferir Fondos</Link>
 					<Link to={PATHS.TRANSACTION_HISTORY}>

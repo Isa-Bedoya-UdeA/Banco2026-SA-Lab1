@@ -30,42 +30,44 @@ const TransferFound = () => {
 						</div>
 					</section>
 					<form className="transferFound__body container__form">
-						<div className="form_group">
-							<label htmlFor="origin_account">
-								Cuenta de Origen
-							</label>
-							<input
-								type="text"
-								placeholder="Número de cuenta origen"
-								name="origin_account"
-								id="origin_account"
-							/>
-						</div>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
-							<path
-								fill="none"
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
-								d="M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1zM9 4h6"
-							/>
-						</svg>
-						<div className="form_group">
-							<label htmlFor="receiver_account">
-								Cuenta de Destino
-							</label>
-							<input
-								type="text"
-								placeholder="Número de cuenta destino"
-								name="receiver_account"
-								id="receiver_account"
-							/>
+						<div className="transferFound__accounts">
+							<div className="form_group">
+								<label htmlFor="origin_account">
+									Cuenta de Origen
+								</label>
+								<input
+									type="text"
+									placeholder="Número de cuenta origen"
+									name="origin_account"
+									id="origin_account"
+								/>
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="none"
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1zM9 4h6"
+								/>
+							</svg>
+							<div className="form_group">
+								<label htmlFor="receiver_account">
+									Cuenta de Destino
+								</label>
+								<input
+									type="text"
+									placeholder="Número de cuenta destino"
+									name="receiver_account"
+									id="receiver_account"
+								/>
+							</div>
 						</div>
 						<div className="form_group">
 							<label htmlFor="amount">Monto (USD)</label>

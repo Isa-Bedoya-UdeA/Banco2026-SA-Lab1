@@ -2,12 +2,21 @@
 	background: var(--secondary-gradient);
 }
 
+.transferFound button {
+	background: var(--secondary-gradient);
+}
+
 /* Big Mobile */
 @media screen and (min-width: 500px) {
 }
 
 /* Small Tablet */
 @media screen and (min-width: 700px) {
+	button {
+		width: 100%;
+		max-width: 35rem;
+		margin: 0 auto;
+	}
 }
 
 /* Big Tablet */

@@ -2,12 +2,45 @@
 	background: var(--primary-gradient);
 }
 
+.createAccount__body {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: 1rem;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form_group input {
+	border-radius: 0.5rem;
+	border: 1px solid var(--gray-dark);
+	padding: 0.5rem 1rem;
+}
+
+.createAccount button {
+	background: var(--primary-gradient);
+}
+
 /* Big Mobile */
 @media screen and (min-width: 500px) {
 }
 
 /* Small Tablet */
 @media screen and (min-width: 700px) {
+	.createAccount__body {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	button {
+		grid-column: 1 / -1;
+		width: 100%;
+		max-width: 35rem;
+		margin: 0 auto;
+	}
 }
 
 /* Big Tablet */

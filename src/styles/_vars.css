@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
 	--primary-color: #3853e2;
 	--secondary-color: #7c4ed9;
@@ -31,6 +33,6 @@
 
 	--bg-blur: rgba(238, 237, 247, 0.3);
 
-	--title-font: sans-serif;
-	--text-font: sans-serif;
+	--title-font: "Archivo Black", sans-serif;
+	--text-font: "Open Sans", sans-serif;
 }

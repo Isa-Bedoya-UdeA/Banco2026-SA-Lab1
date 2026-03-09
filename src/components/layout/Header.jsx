@@ -29,75 +29,81 @@ const Header = () => {
 			</section>
 			<nav className="header__nav">
 				<ul>
-					<NavLink
-						to={PATHS.CREATE_ACCOUNT}
-						end
-						className={(active) => (active ? "active" : "")}
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
+					<li>
+						<NavLink
+							to={PATHS.CREATE_ACCOUNT}
+							end
+							className="header_createAccount"
 						>
-							<g
-								fill="none"
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
 							>
-								<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-								<circle cx="9" cy="7" r="4" />
-								<path d="M19 8v6m3-3h-6" />
-							</g>
-						</svg>
-					</NavLink>
-					<NavLink
-						to={PATHS.TRANSFER_FOUND}
-						end
-						className={(active) => (active ? "active" : "")}
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
+								<g
+									fill="none"
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+								>
+									<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+									<circle cx="9" cy="7" r="4" />
+									<path d="M19 8v6m3-3h-6" />
+								</g>
+							</svg>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to={PATHS.TRANSFER_FOUND}
+							end
+							className="header_transferFound"
 						>
-							<path
-								fill="none"
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
-								d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
-							/>
-						</svg>
-					</NavLink>
-					<NavLink
-						to={PATHS.TRANSACTION_HISTORY}
-						end
-						className={(active) => (active ? "active" : "")}
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
-							<g
-								fill="none"
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
 							>
-								<path d="M21 12a9 9 0 0 0-9-9a9.75 9.75 0 0 0-6.74 2.74L3 8" />
-								<path d="M3 3v5h5m-5 4a9 9 0 0 0 9 9a9.75 9.75 0 0 0 6.74-2.74L21 16" />
-								<path d="M16 16h5v5" />
-							</g>
-						</svg>
-					</NavLink>
+								<path
+									fill="none"
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
+								/>
+							</svg>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to={PATHS.TRANSACTION_HISTORY}
+							end
+							className="header_transactionHistory"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<g
+									fill="none"
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+								>
+									<path d="M21 12a9 9 0 0 0-9-9a9.75 9.75 0 0 0-6.74 2.74L3 8" />
+									<path d="M3 3v5h5m-5 4a9 9 0 0 0 9 9a9.75 9.75 0 0 0 6.74-2.74L21 16" />
+									<path d="M16 16h5v5" />
+								</g>
+							</svg>
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</header>

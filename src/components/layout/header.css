@@ -44,6 +44,44 @@ header {
 	margin: 0;
 }
 
+.header__nav ul li {
+	list-style: none;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.header__nav ul li a {
+	color: var(--title-color);
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0.3rem;
+	transition: background-color 0.2s ease;
+}
+
+.header__nav ul li svg {
+	height: 100%;
+	width: 100%;
+}
+
+.header__nav .active {
+	color: var(--white);
+}
+
+.header__nav .header_createAccount.active {
+	background: var(--primary-gradient);
+}
+
+.header__nav .header_transferFound.active {
+	background: var(--secondary-gradient);
+}
+
+.header__nav .header_transactionHistory.active {
+	background: var(--terciary-gradient);
+}
+
 /* Big Mobile */
 @media screen and (min-width: 500px) {
 	header {
@@ -64,6 +102,10 @@ header {
 @media screen and (min-width: 700px) {
 	header {
 		padding: 0.5rem 2rem;
+	}
+
+	.header__nav ul li a:hover {
+		background-color: var(--gray-dark);
 	}
 }
 

@@ -1,3 +1,5 @@
+import "./TransactionCard.css";
+
 const TransactionCard = ({
 	origin_account,
 	receiver_account,

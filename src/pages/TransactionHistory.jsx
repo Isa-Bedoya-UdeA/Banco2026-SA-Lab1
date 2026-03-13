@@ -1,32 +1,60 @@
+import { useState } from "react";
 import "./TransactionHistory.css";
 import TransactionCard from "../components/cards/TransactionCard";
 
-const transactionsBase = [
-	{
-		id: 1,
-		origin_account: "123456789",
-		receiver_account: "987654321",
-		amount: 100,
-		date: "2022-01-01",
-	},
-	{
-		id: 2,
-		origin_account: "123456789",
-		receiver_account: "987654321",
-		amount: 100,
-		date: "2022-01-01",
-	},
-];
-
 const TransactionHistory = () => {
+
+	const [transactions, setTransactions] = useState([]);
+	const [accountNumber, setAccountNumber] = useState("");
+
+	const handleSearch = async (e) => {
+		e.preventDefault();
+
+		if (!accountNumber) {
+			alert("Ingrese un número de cuenta");
+			return;
+		}
+
+		try {
+
+			const response = await fetch(
+				`http://localhost:8080/api/transactions/${accountNumber}`
+			);
+
+			if (!response.ok) {
+				throw new Error("Error obteniendo transacciones");
+			}
+
+			const data = await response.json();
+
+			const formattedTransactions = data.map((t) => ({
+				id: t.id,
+				origin_account: t.senderAccountNumber,
+				receiver_account: t.receiverAccountNumber,
+				amount: t.amount,
+				date: t.timestamp
+			}));
+
+			setTransactions(formattedTransactions);
+
+		} catch (error) {
+
+			console.error("Error cargando transacciones:", error);
+			alert("No se pudieron cargar las transacciones");
+
+		}
+	};
+
 	return (
 		<>
 			<title>Historial de Transacciones | Banco</title>
-			<meta name="description" content="" />
-			<meta name="keywords" content="" />
+
 			<main className="transactionHistory">
-				<div className="trasanctionHistory__container container">
+
+				<div className="transactionHistory__container container">
+
 					<section className="transactionHistory__header container__header">
+
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -45,20 +73,72 @@ const TransactionHistory = () => {
 								<path d="M16 16h5v5" />
 							</g>
 						</svg>
+
 						<div>
 							<h1>Historial de Transacciones</h1>
-							<p>Ver tus transacciones recientes</p>
+							<p>Consulta las transacciones de una cuenta</p>
 						</div>
+
 					</section>
+
+
+					<form
+						className="transactionHistory__search container__form"
+						onSubmit={handleSearch}
+					>
+
+						<div className="form_group">
+
+							<label htmlFor="account_search">
+								Número de Cuenta
+							</label>
+
+							<input
+								type="text"
+								id="account_search"
+								placeholder="Ej: 123456789"
+								value={accountNumber}
+								onChange={(e) => setAccountNumber(e.target.value)}
+							/>
+
+							<p className="error">Ingrese el número de cuenta para buscar</p>
+
+						</div>
+
+
+						<button className="TransactionButton" type="submit">
+
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="none"
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="m21 21l-4.3-4.3m1.8-5.2a7 7 0 1 1-14 0a7 7 0 0 1 14 0"
+								/>
+							</svg>
+
+							<span>Buscar Transacciones</span>
+
+						</button>
+
+					</form>
+
+
 					<section className="transactionHistory__body container__form">
-						{transactionsBase.length > 0 ? (
-							transactionsBase.map((transaction) => (
+
+						{transactions.length > 0 ? (
+							transactions.map((transaction) => (
 								<TransactionCard
 									key={transaction.id}
 									origin_account={transaction.origin_account}
-									receiver_account={
-										transaction.receiver_account
-									}
+									receiver_account={transaction.receiver_account}
 									amount={transaction.amount}
 									date={transaction.date}
 								/>
@@ -66,8 +146,11 @@ const TransactionHistory = () => {
 						) : (
 							<p className="error">No hay transacciones</p>
 						)}
+
 					</section>
+
 				</div>
+
 			</main>
 		</>
 	);

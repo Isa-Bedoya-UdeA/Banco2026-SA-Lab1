@@ -8,6 +8,13 @@
 	gap: 1rem;
 }
 
+.TransactionButton {
+	background: var(--primary-gradient);
+	width: 100%;
+	max-width: 30rem;
+	margin: 0 auto;
+}
+
 /* Big Mobile */
 @media screen and (min-width: 500px) {
 }
@@ -22,4 +29,13 @@
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
+}
+.transactionHistory__search{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.transactionHistory__search button{
+    margin-top: 16px;
 }

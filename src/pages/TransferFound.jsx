@@ -1,20 +1,77 @@
+import { useState } from "react";
 import "./TransferFound.css";
 
 const TransferFound = () => {
+
+	const [formData, setFormData] = useState({
+		origin_account: "",
+		receiver_account: "",
+		amount: ""
+	});
+
+	const handleChange = (e) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+
+			const response = await fetch("http://localhost:8080/api/transactions", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					senderAccountNumber: formData.origin_account,
+					receiverAccountNumber: formData.receiver_account,
+					amount: Number(formData.amount),
+					timestamp: new Date().toISOString()
+				})
+			});
+
+			if (!response.ok) {
+				const error = await response.text();
+				throw new Error(error);
+			}
+
+			const data = await response.json();
+
+			console.log("Transferencia exitosa:", data);
+
+			alert("Transferencia realizada correctamente");
+
+			// Limpiar formulario
+			setFormData({
+				origin_account: "",
+				receiver_account: "",
+				amount: ""
+			});
+
+		} catch (error) {
+
+			console.error("Error en transferencia:", error);
+			alert("Error: " + error.message);
+
+		}
+	};
+
 	return (
 		<>
 			<title>Transferir Fondos | Banco</title>
 			<meta name="description" content="" />
 			<meta name="keywords" content="" />
+
 			<main className="transferFound">
 				<div className="transferFound__container container">
+
 					<section className="transferFound__header container__header">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
+
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 							<path
 								fill="none"
 								stroke="currentColor"
@@ -24,31 +81,39 @@ const TransferFound = () => {
 								d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
 							/>
 						</svg>
+
 						<div>
 							<h1>Transferir Fondos</h1>
 							<p>Envíe dinero de forma rápida y segura</p>
 						</div>
+
 					</section>
-					<form className="transferFound__body container__form">
+
+					<form
+						className="transferFound__body container__form"
+						onSubmit={handleSubmit}
+					>
+
 						<div className="transferFound__accounts">
+
 							<div className="form_group">
 								<label htmlFor="origin_account">
 									Cuenta de Origen
 								</label>
+
 								<input
 									type="text"
 									placeholder="Número de cuenta origen"
 									name="origin_account"
 									id="origin_account"
+									value={formData.origin_account}
+									onChange={handleChange}
 								/>
+
 								<p className="error">Validaciones</p>
 							</div>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-							>
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 								<path
 									fill="none"
 									stroke="currentColor"
@@ -58,36 +123,46 @@ const TransferFound = () => {
 									d="M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1zM9 4h6"
 								/>
 							</svg>
+
 							<div className="form_group">
 								<label htmlFor="receiver_account">
 									Cuenta de Destino
 								</label>
+
 								<input
 									type="text"
 									placeholder="Número de cuenta destino"
 									name="receiver_account"
 									id="receiver_account"
+									value={formData.receiver_account}
+									onChange={handleChange}
 								/>
+
 								<p className="error">Validaciones</p>
 							</div>
+
 						</div>
+
 						<div className="form_group">
+
 							<label htmlFor="amount">Monto (USD)</label>
+
 							<input
 								type="number"
 								placeholder="0.00"
 								name="amount"
 								id="amount"
+								value={formData.amount}
+								onChange={handleChange}
 							/>
+
 							<p className="error">Validaciones</p>
+
 						</div>
+
 						<button type="submit">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-							>
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 								<path
 									fill="none"
 									stroke="currentColor"
@@ -97,9 +172,13 @@ const TransferFound = () => {
 									d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
 								/>
 							</svg>
+
 							<span>Realizar Transferencia</span>
+
 						</button>
+
 					</form>
+
 				</div>
 			</main>
 		</>
